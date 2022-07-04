@@ -18,11 +18,11 @@ const Results = ({ inputState }) => {
 
         const months = years * 12; //total number of months
         let totalInit = down;
-        let princ = Math.round(remainingDebt / months); //constant, monthly principal payment
+        let princ = Math.ceil(remainingDebt / months); //constant, monthly principal payment
         let grandTotal = 0; //accumulated total payments
 
         for (let month = 1; month <= months; month++) { //while the currentmonth [month] does not equal the total number of months [months], do the loop (a 1 is added so that month 1 = 1 and not 0)
-            if (month === months) { princ = debt }; //if its the last month make princ the total debt
+            if (month === months) { princ = remainingDebt }; //if its the last month make princ the total debt
 
             let year = Math.ceil(month / 12);    //Current year by taking current month [month] div by 12
 
