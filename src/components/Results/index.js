@@ -68,12 +68,12 @@ const Results = ({ inputState }) => {
         <div id="resultsDiv">
             <button onClick={calculate} >CALCULATE</button>
             <br />
-            <label htmlFor="chYear">Choose a Year:</label>
+            <label htmlFor="chYear">Choose a Year: </label>
             <select name="Year" id="chYear" onChange={handleSelection}>
                 {results.map((e, i) => (<option key={i} value={i + 1}>{i + 1} </option>))};
             </select>
             <br />
-            <label htmlFor="chMonth">Choose a Month:</label>
+            <label htmlFor="chMonth">Choose a Month: </label>
             <select name="Month" id="chMonth" onChange={handleSelection}>
                 {results[selectState.year - 1].map((e, i) => (<option key={i} value={i + 1}>{i + 1} </option>))};
             </select>
