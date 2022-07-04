@@ -2,11 +2,11 @@ import {useState} from "react";
 const Input = ({inputState, setInputState}) => {
   
    const updateInputs = (event) => {
-    setInputState(old =>  ({...old, [event.target.id]: event.target.value}));
-   }
-   console.log(inputState)
+    setInputState(old =>  ({...old, [event.target.id]: parseFloat(event.target.value)}));
+   };
+
     return (
-        <>
+        <div id="inputDiv">
             <label htmlFor={"apr"}>Input Fixed APR (1%=.01): </label>
             <br/>
             <input type={"number"} id="apr" step={".0001"} defaultValue={inputState.apr} onChange={updateInputs}/>
@@ -22,7 +22,7 @@ const Input = ({inputState, setInputState}) => {
             <label htmlFor={"years"}>Years to Pay Off: </label>
             <br/>
             <input type={"number"} id="years" defaultValue={inputState.years} onChange={updateInputs}/>
-        </>
+        </div>
     )
 }
 
