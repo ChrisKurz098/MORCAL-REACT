@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MORCAL-REACT/static/css/main.938a0765.css",
+    "main.js": "/MORCAL-REACT/static/js/main.4d66149a.js",
+    "static/js/787.95cdcdce.chunk.js": "/MORCAL-REACT/static/js/787.95cdcdce.chunk.js",
+    "index.html": "/MORCAL-REACT/index.html",
+    "main.938a0765.css.map": "/MORCAL-REACT/static/css/main.938a0765.css.map",
+    "main.4d66149a.js.map": "/MORCAL-REACT/static/js/main.4d66149a.js.map",
+    "787.95cdcdce.chunk.js.map": "/MORCAL-REACT/static/js/787.95cdcdce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.938a0765.css",
+    "static/js/main.4d66149a.js"
+  ]
+}
