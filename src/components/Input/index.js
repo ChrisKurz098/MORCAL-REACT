@@ -10,25 +10,25 @@ const Input = ({ inputState, setInputState }) => {
             <div className="inputContainer">
                 <label className="inputLabel" htmlFor={"apr"}>Input Fixed APR (%) </label>
                 <br />
-               <span><input type={"number"} id="apr" step={".01"} defaultValue={inputState.apr} onChange={updateInputs} /> %</span>
+               <span> <input type={"number"} id="apr" step={".01"} defaultValue={inputState.apr} onClick={(e) => e.target.select()} onChange={updateInputs} /> %</span>
             </div>
 
             <div className="inputContainer">
                 <label className="inputLabel" htmlFor={"debt"}>Total Home Price </label>
                 <br />
-                <span>$ <input type={"number"} id="debt" defaultValue={inputState.debt} onChange={updateInputs} /></span>
+                <span>$ <input type={"number"} id="debt" defaultValue={inputState.debt} onClick={(e) => e.target.select()} onChange={updateInputs} /></span>
             </div>
 
             <div className="inputContainer">
                 <label className="inputLabel" htmlFor={"down"}>Down Payment (%) </label>
                 <br />
-                <span>$ <input type={"number"} id="down" step={".1"} defaultValue={inputState.down} onChange={updateInputs} /></span>
+                <span> <input type={"number"} id="down" step={".1"} defaultValue={inputState.down} onClick={(e) => e.target.select()} onChange={updateInputs} />%</span>
             </div>
 
             <div className="inputContainer">
                 <label className="inputLabel" htmlFor={"years"}>Fixed Loan Terms (yrs) </label>
                 <br />
-                <span><input type={"number"} id="years" max={30} min={1} defaultValue={inputState.years} onChange={updateInputs} /></span>
+                <span><input type={"number"} id="years" max={30} min={1} defaultValue={inputState.years} onClick={(e) => e.target.select()} onChange={updateInputs} /></span>
             </div>
         </div>
     )

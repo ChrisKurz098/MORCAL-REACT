@@ -6,10 +6,14 @@ import Results from './components/Results';
 function App() {
   const [inputState, setInputState] = useState({apr: 0, debt: 0,  down:0, years: 30 });
   return (
-    <div className="App">
+<>
+<h1>MORCAL</h1>
+<h5>Temporal Fixed Mortgage Calculator</h5>
+    <div className="App" >
  <Input inputState = {inputState} setInputState={setInputState}></Input>
  <Results inputState = {inputState}></Results>
     </div>
+  </>
   );
 }
 
