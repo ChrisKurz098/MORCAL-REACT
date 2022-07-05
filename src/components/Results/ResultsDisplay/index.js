@@ -4,10 +4,10 @@ const ResultsDisplay = ({ selectState, results }) => {
         year--;
         month--;
         return (
-            <div id="resultsDisplayDiv" style={{"whiteSpace": "pre-line"}} >
+            <div id="resultsDisplayDiv"  >
                 {
-                    `
-Total Payment: $${results[year][month].totalPayment}
+                    
+`Total Payment: $${results[year][month].totalPayment}
 Year: ${results[year][month].year}  
 Month: ${results[year][month].month}  
 Intrest: $${results[year][month].intrest}
@@ -20,7 +20,7 @@ Grand Total: $${results[year][month].grandTotal}
             </div>
         )
     };
-    return (<>Press Calculate</>)
+    return (<div id="resultsDisplayDiv" style={{textAlign: "center"}} >Press Calculate</div>)
 }
 
 export default ResultsDisplay;

@@ -14,7 +14,9 @@ const Results = ({ inputState }) => {
         let newResults = Array.from({ length: inputState.years }, (__, i) => ([]));
 
         let { apr, debt, down, years } = inputState;
-        let remainingDebt = debt-down;
+        apr = apr/100;
+        down= down/100;
+        let remainingDebt = debt-(debt*down);
 
         const months = years * 12; //total number of months
         let totalInit = down;
@@ -77,7 +79,6 @@ const Results = ({ inputState }) => {
             <select name="Month" id="chMonth" onChange={handleSelection}>
                 {results[selectState.year - 1].map((e, i) => (<option key={i} value={i + 1}>{i + 1} </option>))};
             </select>
-            <br/>
          <ResultsDisplay selectState = {selectState} results = {results}/>
         </div>
     )

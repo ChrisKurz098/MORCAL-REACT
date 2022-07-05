@@ -1,32 +1,66 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
+/*  Main CSS */
+#inputDiv, #resultsDiv{
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 225px;
+  min-width: 200px;
+  text-align: justify;
+}
+#resultsDiv{
+  text-align: center;
+}
+
+.inputContainer{
+   border: 2px solid black; 
+   border-radius: 10px;
+   margin: 5px 0px;
+   padding: 3px;
+   text-align: center;
+}
+.inputLabel{
+  background-color: white;
+  font-weight: bold;
+  position: relative;
+  font-size:10px;
+  top: -16px;
+  left: -20px;
+}
+
+input{
+ border: none;
+ margin: 3px 0px;
+}
+input:focus{
+ outline: none;
+
+}
+span{
+  position: relative;
+  top: -7px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 0px 4px 4px 5px;
+}
+
+#resultsDisplayDiv{
+  white-space: pre-line;
+  text-align: justify;
+  margin-top: 5px;
+  border-top: 2px dotted grey;
+}
+
 
 @keyframes App-logo-spin {
   from {
