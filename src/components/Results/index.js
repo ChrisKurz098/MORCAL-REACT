@@ -14,6 +14,7 @@ const Results = ({ inputState }) => {
         let newResults = Array.from({ length: inputState.years }, (__, i) => ([]));
 
         let { apr, debt, down, years } = inputState;
+        if (years>30) years=30; 
         apr = apr/100;
         down= down/100;
         let remainingDebt = debt-(debt*down);
@@ -25,7 +26,7 @@ const Results = ({ inputState }) => {
 
         for (let month = 1; month <= months; month++) { //while the currentmonth [month] does not equal the total number of months [months], do the loop (a 1 is added so that month 1 = 1 and not 0)
             if (month === months) { princ = remainingDebt }; //if its the last month make princ the total debt
-
+         
             let year = Math.ceil(month / 12);    //Current year by taking current month [month] div by 12
 
             const intrest = Math.round((remainingDebt * apr / 12)); //calculate new intrest amount
@@ -47,6 +48,8 @@ const Results = ({ inputState }) => {
 
             //prepar for next loop
             totalInit = Math.round(totalInit + payment)
+           setSelection(old => ({year: 1, month: 1}));
+          
         }
         //update results state with new results
         setResults(newResults);
